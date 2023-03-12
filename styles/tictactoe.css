@@ -1,0 +1,17 @@
+#tictactoe-board {
+    display: grid;
+    grid-template-columns: repeat(3, 75px);
+    grid-template-rows: repeat(3, 75px);
+    justify-content: center;
+    border: 2px solid red;
+    margin: 20px;
+    padding: 20px;
+}
+
+.tictactoe-square {
+    border: 2px solid green;
+    display: block;
+    object-fit: contain;
+    width: 90%;
+    height: 90%;
+}

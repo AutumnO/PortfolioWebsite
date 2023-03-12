@@ -1,0 +1,115 @@
+:root {
+    --color-primary: #B45F06; /* alt: #D68910 or #B45F06 or #B9770E*/
+    --color-secondary: #F4D03F; /* alt: #F1C40F or #F4D03F*/
+    --color-text-light: #FFF2CC; /* alt: #F9E79F or #FFF2CC or #FCF3CF*/
+    --color-text-dark: #7f6000;
+
+    --width-columns: 240px auto;
+
+    --font-size-headings: 35px;
+    --font-size-subheadings: 24px;
+    --font-size-body: 16px;
+    --font-size-footer: 12px;
+}
+
+html {
+    box-sizing: border-box;
+    background-color: var(--color-primary);
+    font-size: var(--font-size-body);
+    color: var(--color-text-dark);
+}
+
+body {
+    display: grid;
+    grid-template-columns: var(--width-columns);
+    grid-template-rows: 100px auto 75px;
+    grid-template-areas: 
+        "header header"
+        "side-nav main"
+        "footer footer";
+    margin: 0px;
+}
+
+
+/* HEADER */
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: var(--width-columns);
+    height: 100%;
+}
+
+header > h1 {
+    padding: 5px 5px 15px 5px;
+    margin: 0px;
+    align-self: center;
+    text-align: center;
+    font-size: var(--font-size-headings);
+    color: var(--color-text-light);
+    text-transform: lowercase;
+}
+
+#header-nav > ul {    
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 0px;
+    height: 60px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 5px 70px;
+    font-size: var(--font-size-subheadings);
+    list-style-type: none;
+}
+
+#header-nav > ul > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+}
+
+
+/* SIDE NAVIGATION BAR */
+
+#side-nav {
+    grid-area: side-nav;
+    display: grid;
+    grid-template-columns: auto 60px;
+    grid-template-rows: auto;
+    font-size: var(--font-size-subheadings);
+}
+
+#side-nav-headers {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px 100px 100px 100px;
+    margin: 30px 0px;
+}
+
+#side-nav-headers > a {
+    text-align: end;
+    text-decoration: none;
+    color: var(--color-text-light);
+}
+
+#side-nav-timeline {
+    margin: 30px;
+    border: var(--color-text-light) solid 2px;
+}
+
+
+/* MAIN CONTENT */
+
+main {
+    grid-area: main;
+    background-color: var(--color-secondary);
+}
+
+.footer {
+    grid-area: footer;
+    font-size: 14px;
+    text-align: center;
+    color: var(--color-text-light);
+}
+
