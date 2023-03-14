@@ -4,7 +4,10 @@
     --color-text-light: #FFF2CC; /* alt: #F9E79F or #FFF2CC or #FCF3CF*/
     --color-text-dark: #7f6000;
 
-    --width-columns: 260px auto;
+    --height-header: 12dvh;
+    --height-footer: 10dvh;
+    --height-sidebar: calc(100% - var(--height-header) - var(--height-footer));
+    --width-sidebar: 260px;
 
     --font-family-body: Arial, sans-serif;
 
@@ -16,31 +19,28 @@
 
 html {
     box-sizing: border-box;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     font-family: var(--font-family-body);
     font-size: var(--font-size-body);
     color: var(--color-text-dark);
 }
 
 body {
-    display: grid;
-    grid-template-columns: var(--width-columns);
-    grid-template-rows: 100px auto 75px;
-    grid-template-areas: 
-        "header header"
-        "side-nav main"
-        "footer footer";
-    margin: 0px;
+    margin: 0;
 }
 
 
 /* HEADER */
 
 header {
-    grid-area: header;
+    position: fixed;
+    top: 0px;
+    left: 0px;
     display: grid;
-    grid-template-columns: var(--width-columns);
-    height: 100%;
+    grid-template-columns: var(--width-sidebar) auto;
+    width: 100%;
+    height: var(--height-header);
+    background-color: var(--color-primary);
 }
 
 header > h1 {
@@ -59,7 +59,7 @@ header > h1 {
     flex-wrap: wrap;
     padding: 5px 40px 20px 40px;
     margin: 0px;
-    height: 75px;
+    height: calc(var(--height-header) - 25px);
     justify-content: flex-end;
     align-items: flex-end;
     gap: 5px 70px;
@@ -77,10 +77,14 @@ header > h1 {
 /* SIDE NAVIGATION BAR */
 
 #side-nav {
-    grid-area: side-nav;
+    position: fixed;
+    left: 0;
+    bottom: var(--height-footer);
     display: grid;
     grid-template-columns: auto 60px;
-    grid-template-rows: auto;
+    width: var(--width-sidebar);
+    height: var(--height-sidebar);
+    background-color: var(--color-primary);
     font-size: var(--font-size-subheadings);
 }
 
@@ -106,12 +110,19 @@ header > h1 {
 /* MAIN CONTENT */
 
 main {
-    grid-area: main;
-    background-color: var(--color-secondary);
+    width: calc(100% - var(--width-sidebar) - 10px);
+    height: calc(100% - var(--height-header) - var(--height-footer));
+    margin: var(--height-header) 0 var(--height-footer) var(--width-sidebar);
+    padding: 5px; /* change value in width if this is changed */
 }
 
-.footer {
-    grid-area: footer;
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--height-footer);
+    background-color: var(--color-primary);
     font-size: 14px;
     text-align: center;
     color: var(--color-text-light);
