@@ -1,13 +1,15 @@
 :root {
     --color-primary: #B45F06; /* alt: #D68910 or #B45F06 or #B9770E*/
-    --color-secondary: #F4D03F; /* alt: #F1C40F or #F4D03F*/
+    --color-secondary: #FFD966; /* alt: #F1C40F or #F4D03F or #FFD966*/
     --color-text-light: #FFF2CC; /* alt: #F9E79F or #FFF2CC or #FCF3CF*/
     --color-text-dark: #7f6000;
 
-    --width-columns: 240px auto;
+    --width-columns: 260px auto;
 
-    --font-size-headings: 35px;
-    --font-size-subheadings: 24px;
+    --font-family-body: Arial, sans-serif;
+
+    --font-size-headings: 30px;
+    --font-size-subheadings: 22px;
     --font-size-body: 16px;
     --font-size-footer: 12px;
 }
@@ -15,6 +17,7 @@
 html {
     box-sizing: border-box;
     background-color: var(--color-primary);
+    font-family: var(--font-family-body);
     font-size: var(--font-size-body);
     color: var(--color-text-dark);
 }
@@ -46,6 +49,7 @@ header > h1 {
     align-self: center;
     text-align: center;
     font-size: var(--font-size-headings);
+    font-weight: normal;
     color: var(--color-text-light);
     text-transform: lowercase;
 }
@@ -53,9 +57,9 @@ header > h1 {
 #header-nav > ul {    
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 5px 40px 20px 40px;
     margin: 0px;
-    height: 60px;
+    height: 75px;
     justify-content: flex-end;
     align-items: flex-end;
     gap: 5px 70px;
@@ -81,21 +85,21 @@ header > h1 {
 }
 
 #side-nav-headers {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 100px 100px 100px 100px;
-    margin: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: end;
+    margin: 0px 0px 120px 5px;
 }
 
 #side-nav-headers > a {
-    text-align: end;
     text-decoration: none;
     color: var(--color-text-light);
 }
 
 #side-nav-timeline {
-    margin: 30px;
-    border: var(--color-text-light) solid 2px;
+    margin: 50px 25px;
+    border-left: var(--color-text-light) solid 2px;
 }
 
 
