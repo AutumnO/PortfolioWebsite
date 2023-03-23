@@ -4,17 +4,17 @@
     --color-text-light: #FFF2CC; /* alt: #F9E79F or #FFF2CC or #FCF3CF*/
     --color-text-dark: #7f6000;
 
-    --height-header: 12dvh;
-    --height-footer: 10dvh;
+    --height-header: 8rem;
+    --height-footer: 8rem;
     --height-sidebar: calc(100% - var(--height-header) - var(--height-footer));
-    --width-sidebar: 260px;
+    --width-sidebar: 18rem;
 
     --font-family-body: Arial, sans-serif;
 
     --font-size-headings: 30px;
     --font-size-subheadings: 22px;
     --font-size-body: 16px;
-    --font-size-footer: 12px;
+    --font-size-footer: 14px;
 }
 
 html {
@@ -34,8 +34,8 @@ body {
 
 header {
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     display: grid;
     grid-template-columns: var(--width-sidebar) auto;
     width: 100%;
@@ -44,8 +44,8 @@ header {
 }
 
 header > h1 {
-    padding: 5px 5px 15px 5px;
-    margin: 0px;
+    padding: 0.25rem 0.25rem 1rem 0.25rem;
+    margin: 0;
     align-self: center;
     text-align: center;
     font-size: var(--font-size-headings);
@@ -57,12 +57,12 @@ header > h1 {
 #header-nav > ul {    
     display: flex;
     flex-wrap: wrap;
-    padding: 5px 40px 20px 40px;
-    margin: 0px;
-    height: calc(var(--height-header) - 25px);
+    padding: 0.25rem 2rem 1rem 2rem;
+    margin: 0;
+    height: calc(var(--height-header) - 1.25rem);
     justify-content: flex-end;
     align-items: flex-end;
-    gap: 5px 70px;
+    gap: 0.25rem 4rem;
     font-size: var(--font-size-subheadings);
     list-style-type: none;
 }
@@ -81,7 +81,7 @@ header > h1 {
     left: 0;
     bottom: var(--height-footer);
     display: grid;
-    grid-template-columns: auto 60px;
+    grid-template-columns: auto 3.5rem;
     width: var(--width-sidebar);
     height: var(--height-sidebar);
     background-color: var(--color-primary);
@@ -93,7 +93,7 @@ header > h1 {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: end;
-    margin: 0px 0px 120px 5px;
+    margin: 0 0 6rem 0.25rem;
 }
 
 #side-nav-headers > a {
@@ -102,7 +102,7 @@ header > h1 {
 }
 
 #side-nav-timeline {
-    margin: 50px 25px;
+    margin: 2.5rem 1.5rem;
     border-left: var(--color-text-light) solid 2px;
 }
 
@@ -110,11 +110,48 @@ header > h1 {
 /* MAIN CONTENT */
 
 main {
-    width: calc(100% - var(--width-sidebar) - 10px);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: calc(100% - var(--width-sidebar) - 3rem);
     height: calc(100% - var(--height-header) - var(--height-footer));
     margin: var(--height-header) 0 var(--height-footer) var(--width-sidebar);
-    padding: 5px; /* change value in width if this is changed */
+    padding: 4rem 1.5rem 5rem 1.5rem; /* change value in width if right or left is changed */
 }
+
+h2 {
+    font-size: var(--font-size-headings);
+}
+
+section {
+    scroll-margin-top: 7rem;
+    scroll-snap-type: proximity;
+}
+
+#about-me-header {
+    margin-top: 0;
+}
+
+h3 {
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: var(--font-size-subheadings);
+    font-weight: normal;
+}
+
+.about-me-text {
+    line-height: 1.5rem;
+}
+
+.resume-item-head-details > p {
+    margin: 0 0;
+}
+
+.resume-item-description {
+    margin: 0 2.5rem; /* indents descriptions */
+}
+
+
+/* FOOTER */
 
 footer {
     position: fixed;
@@ -123,8 +160,18 @@ footer {
     width: 100%;
     height: var(--height-footer);
     background-color: var(--color-primary);
-    font-size: 14px;
+    font-size: var(--font-size-footer);
     text-align: center;
     color: var(--color-text-light);
 }
 
+footer > p {
+    margin: 1rem 0;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+footer > p > a {
+    color: var(--color-text-light);
+}
