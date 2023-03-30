@@ -150,6 +150,32 @@ h3 {
     margin: 0 2.5rem; /* indents descriptions */
 }
 
+.content-sticky-links {
+    position: fixed;
+    right: 0;
+    bottom: calc(var(--height-footer));
+    width: calc(100% - var(--width-sidebar) - 2rem);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem 1rem; /* change width if this changes */
+    background-image: radial-gradient(var(--color-secondary) 35%, #00000000 75%);
+    /*background-image: radial-gradient(blue 45%, red 75%);*/
+}
+
+.content-sticky-links > a {
+    width: 10rem;
+    line-height: 2.5rem;
+    background-color: var(--color-primary);
+    border: outset 1px var(--color-text-light);
+    border-radius: 6px;
+    box-shadow: 0 2px 3px var(--color-text-dark);
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-text-light);
+}
+
 
 /* FOOTER */
 
