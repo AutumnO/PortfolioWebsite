@@ -106,6 +106,15 @@ header > h1 {
     border-left: var(--color-text-light) solid 2px;
 }
 
+#side-nav-diamond {
+    position: fixed;
+    width: 0.8rem;
+    height: 0.8rem;
+    transform: translate(-0.65rem, 3.5rem) rotate(45deg); /* change in javascript too */
+    border: solid 3px var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
 
 /* MAIN CONTENT */
 
@@ -151,7 +160,7 @@ h3 {
 }
 
 .content-sticky-links {
-    position: fixed;
+    position: fixed; /* Try sticky positioning */
     right: 0;
     bottom: calc(var(--height-footer));
     width: calc(100% - var(--width-sidebar) - 2rem);
