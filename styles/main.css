@@ -1,8 +1,22 @@
 :root {
-    --color-primary: #B45F06; /* alt: #D68910 or #B45F06 or #B9770E*/
-    --color-secondary: #FFD966; /* alt: #F1C40F or #F4D03F or #FFD966*/
-    --color-text-light: #FFF2CC; /* alt: #F9E79F or #FFF2CC or #FCF3CF*/
+    /* AUTUMN COLORS
+    primary alt: #D68910 or #B45F06 or #B9770E
+    secondary alt: #F1C40F or #F4D03F or #FFD966
+    text light alt: #F9E79F or #FFF2CC or #FCF3CF
+    --color-primary: #B45F06;
+    --color-secondary: #FFD966;
+    --color-text-light: #FFF2CC;
     --color-text-dark: #7f6000;
+    */
+    
+    /* SPRING COLORS
+    primary alt: #D68910 or #B45F06 or #B9770E
+    secondary alt: #F1C40F or #F4D03F or #FFD966
+    text light alt: #F9E79F or #FFF2CC or #FCF3CF */
+    --color-primary: #537345;
+    --color-secondary: #CAD996;
+    --color-text-light: #F2F2F2;
+    --color-text-dark: #0D0D0D;
 
     --height-header: 8rem;
     --height-footer: 8rem;
