@@ -2,23 +2,74 @@
 <html lang="en-US">
     <head>
         <meta charset="utf-8" />
-        <link href="styles/tictactoe.css" rel="stylesheet" />
-        <title>Tic-Tac-Toe</title>
+        <link href="styles/main.css" rel="stylesheet" />
+		<link href="styles/tictactoe.css" rel="stylesheet" />
+        <title>Autumn Ossello</title>
     </head>
     <body>
-        <div id="tictactoe-board">
-            <img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="top-left-square">
-            <img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="top-square">
-            <img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="top-right-square">
-            <img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="middle-left-square">
-            <img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="middle-square">
-            <img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="middle-right-square">
-            <img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="bottom-left-square">
-            <img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="bottom-square">
-            <img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="bottom-right-square">
-        </div>
-        <button id="clear-board-button">Clear Board</button>
+        <header>
+            <h1>Autumn Ossello</h1>
+            <nav id="header-nav">
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="tictactoe.html">Arcade</a></li>
+                    <li><a href="contactMe.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <nav id="side-nav">
+            <div id="side-nav-headers">
+                <a href="#top">Tic-Tac-Toe</a>
+            </div>
+            <div id="side-nav-timeline">
+                <div id="side-nav-diamond"></div>
+            </div>
+        </nav>
+        
+        <main>
+            <section>
+                <h2 id="tic-tac-toe-header">Tic-Tac-Toe</h2>
+				<p>
+					This game is a work in process, please be
+					patient while I work out the kinks!
+				</p>
+                <div id="tictactoe-board">
+					<img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="top-left-square">
+					<img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="top-square">
+					<img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="top-right-square">
+					<img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="middle-left-square">
+					<img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="middle-square">
+					<img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="middle-right-square">
+					<img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="bottom-left-square">
+					<img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="bottom-square">
+					<img src="images/EmptyImg.png" alt="Empty Square" class="tictactoe-square" id="bottom-right-square">
+				</div>
+				<button id="clear-board-button">Clear Board</button>
 
-        <script src="scripts/tictactoe.js"></script>
+				<script src="scripts/tictactoe.js"></script>
+            </section>
+
+            <div class="content-sticky-links">
+                <a  href="https://github.com/AutumnO" 
+                    rel="external" 
+                    target="_blank">View My GitHub</a>
+                <a  href="files/MyResumeMarch2023.pdf" 
+                    download="AutumnOsselloMarch2023Resume"
+                    target="_blank"
+                    type="application/pdf">Download Resume</a>
+            </div>
+
+
+        </main>
+        <footer>
+            <p>
+                Autumn Ossello</br>
+                Phone #: <a href="tel:7072347337">(707) 234 - 7337</a></br>
+                Email: <a href="mailto:aut.ossello@gmail.com">aut.ossello@gmail.com</a></br>
+                Created by Autumn Ossello. Last edited December 2024.
+            </p>
+        </footer>
+
+        <script type="text/javascript" src="scripts/index.js"></script>
     </body>
 </html>
